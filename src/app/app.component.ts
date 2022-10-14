@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aula_cep_cnpj';
+  title = 'Busca Cep e Cnpj';
+
+  constructor(
+    private router: Router
+  ){}
+
+  hideButtons(){
+    return this.router.url !== '/cep' && this.router.url !== '/cnpj';
+   }
 }

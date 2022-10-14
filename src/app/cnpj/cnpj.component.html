@@ -1,0 +1,267 @@
+<form #form="ngForm">
+  <i
+    class="pi pi-arrow-left cursor-pointer"
+    style="font-size: 2rem"
+    routerLink="/"
+  ></i>
+  <div class="grid flex justify-content-center flex-wrap">
+    <div class="col-8 md:col-6 lg:col-3">
+      <h6>Informe o CNPJ</h6>
+      <p-inputMask
+        type="tel"
+        styleClass="w-full"
+        mask="99.999.999/9999-99"
+        (onBlur)="buscarCNPJ(buscacnpj, form)"
+        name="cep"
+        [(ngModel)]="buscacnpj"
+        [unmask]="true"
+      ></p-inputMask>
+    </div>
+    <div class="col-4 md:col-6 lg:col-3">
+      <h6>&nbsp;</h6>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Pesquisar"
+        class="p-button-outlined"
+        (click)="buscarCNPJ(buscacnpj, form)"
+      ></button>
+    </div>
+  </div>
+
+  <div class="grid flex" *ngIf="buscar">
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>matriz ou Filial</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="matrizFilial"
+        name="matrizFilial"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Descrição da Matriz ou Filial</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="descricaoMatrizFilial"
+        name="descricaoMatrizFilial"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Razão Social</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id=" razaoSocial"
+        name=" razaoSocial"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Nome Fantasia</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="nomeFantasia"
+        name="nomeFantasia"
+        disabled="true"
+      />
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Situacao Cadastral</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="situacaoCadastral"
+        name="situacaoCadastral"
+        disabled="true"
+      />
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Data da Situacao Cadastral</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="dataSituacaoCadastral"
+        name="dataSituacaoCadastral"
+        disabled="true"
+      />
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Nome da Cidade no Exterior</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="nomeCidadeExterior"
+        name="nomeCidadeExterior"
+        disabled="true"
+      />
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Data de Inicio da Atividade</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="dataInicioAtividade"
+        name="dataInicioAtividade"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>CNAE Fiscal</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="cnaeFiscal"
+        name="cnaeFiscal"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>logradouro</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="logradouro"
+        name="logradouro"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>numero</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="numero"
+        name="numero"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>complemento</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="complemento"
+        name="complemento"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>bairro</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="bairro"
+        name="bairro"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>municipio</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="municipio"
+        name="municipio"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>CEP</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="cep"
+        name="cep"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>UF</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="uf"
+        name="uf"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Celular</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="dddTelefone1"
+        name="dddTelefone1"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Celular 2</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="dddTelefone2"
+        name="dddTelefone2"
+        disabled="true"
+      />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <h6>Capital Social</h6>
+      <input
+        class="w-full"
+        type="text"
+        pInputText
+        ngModel
+        id="capitalSocial"
+        name="capitalSocial"
+        disabled="true"
+      />
+    </div>
+  </div>
+</form>
